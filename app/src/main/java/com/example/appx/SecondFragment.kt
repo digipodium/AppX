@@ -37,6 +37,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         createLocationRequest()
         locationCallback = object : LocationCallback() {
+
             override fun onLocationResult(loc: LocationResult) {
                 loc ?: return
                 for (location in loc.locations) {
